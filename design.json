@@ -1,0 +1,207 @@
+{
+  "$schema": "design-system-v1",
+  "meta": {
+    "name": "U-AUBEN Community Language Hub",
+    "description": "Système de design dérivé structurellement de la maquette 'Centre Communautaire de Langue' mais recoloré intégralement avec la palette du logo New Dawn University (U-AUBEN). Toute trace du violet/vert-citron d'origine est supprimée.",
+    "sourceOfTruthForColor": "logo U-AUBEN uniquement — jamais la capture d'écran d'origine",
+    "artDirectionSummary": "Institutionnel, sérieux, premium. Bleu marine profond comme socle, rouge grenat comme accent d'action/énergie, blanc cassé comme respiration. On garde la structure moderne (mobile-first, cartes arrondies, typographie bold géante) de la capture, mais on l'habille comme une université, pas comme une appli de dating."
+  },
+
+  "colorPalette": {
+    "extractionNote": "Couleurs extraites par échantillonnage pixel du fichier auben.jpeg (logo), pas inventées.",
+    "primary": {
+      "navy900": "#0A2A54",
+      "navy700": "#0E3C70",
+      "navy500": "#12518F",
+      "navy300": "#4A7BB0"
+    },
+    "accent": {
+      "crimson700": "#8C0714",
+      "crimson500": "#BB0619",
+      "crimson400": "#D91F30"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "cream": "#F5F3EE",
+      "fog100": "#E7EAF0",
+      "fog300": "#C4CBD9",
+      "slate600": "#5B6472",
+      "ink900": "#0B1220"
+    },
+    "usage": {
+      "backgroundPrimary": "navy900 → navy700 (dégradé diagonal, remplace le violet/vert de la capture)",
+      "backgroundSurface": "cream ou white pour les cartes/panneaux clairs",
+      "textOnDark": "white pour les titres, fog300 pour le texte secondaire",
+      "textOnLight": "ink900 pour les titres, slate600 pour le texte secondaire",
+      "callToAction": "crimson500 (jamais navy — le rouge est réservé à l'action/urgence, pas à la décoration)",
+      "highlightAccent": "crimson500 utilisé en soulignement/cerclage sur un mot-clé du titre, comme dans la capture d'origine",
+      "iconContainers": "fond white/cream avec icône navy700, ou fond navy700 avec icône white — jamais de mélange low-contrast",
+      "forbidden": "Ne jamais réintroduire violet, vert citron, ou tout dégradé néon. Palette fermée à navy/crimson/neutral."
+    },
+    "gradients": {
+      "heroBackground": {
+        "type": "linear",
+        "angle": "135deg",
+        "stops": ["navy900", "navy700"],
+        "note": "Remplace le dégradé violet→vert de la capture. Doit rester sobre, pas de saturation criarde."
+      },
+      "ctaButtonOptional": {
+        "type": "linear",
+        "angle": "180deg",
+        "stops": ["crimson500", "crimson700"]
+      }
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display": "'Sora', 'Poppins', system-ui, sans-serif",
+      "body": "'Inter', system-ui, sans-serif",
+      "rationale": "Capture d'origine = sans-serif géométrique bold condensé. On garde ce ton mais on choisit des familles disponibles et lisibles, pas de typo décorative — U-AUBEN est une institution académique."
+    },
+    "scale": {
+      "heroTitle": { "size": "34px", "lineHeight": "1.05", "weight": 800, "letterSpacing": "-0.02em", "case": "uppercase" },
+      "sectionTitle": { "size": "22px", "lineHeight": "1.15", "weight": 700, "case": "none" },
+      "subtitle": { "size": "15px", "lineHeight": "1.4", "weight": 500, "color": "fog300 sur fond sombre" },
+      "body": { "size": "14px", "lineHeight": "1.5", "weight": 400 },
+      "caption": { "size": "12px", "lineHeight": "1.3", "weight": 500, "letterSpacing": "0.02em" },
+      "buttonLabel": { "size": "13px", "weight": 700, "case": "uppercase", "letterSpacing": "0.04em" }
+    },
+    "titleHighlightStyle": {
+      "description": "Le mot central du titre (ex: 'COMMUNAUTAIRE') reste cerclé/souligné à main levée comme dans la capture, mais le trait passe du vert-citron au crimson500.",
+      "strokeColor": "crimson500",
+      "strokeWidth": "3px",
+      "style": "hand-drawn ellipse, légèrement imparfaite, pas un rectangle parfait"
+    }
+  },
+
+  "spacing": {
+    "unit": 4,
+    "scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px",
+      "3xl": "64px"
+    },
+    "screenPadding": "24px",
+    "stackGapDefault": "16px",
+    "rationale": "Base 4px stricte, cohérente avec la densité mobile-first observée dans la capture (marges généreuses autour du contenu central, groupement serré des éléments liés)."
+  },
+
+  "radii": {
+    "sm": "8px",
+    "md": "14px",
+    "lg": "20px",
+    "pill": "999px",
+    "note": "La capture utilise des coins très arrondis sur les boutons/cartes (proche de 'lg' à 'pill'). On garde ce niveau d'arrondi — c'est un des rares éléments purement structurels à conserver tel quel."
+  },
+
+  "elevation": {
+    "cardShadow": "0 8px 24px rgba(10,42,84,0.25)",
+    "buttonShadowRest": "0 4px 12px rgba(139,7,20,0.35)",
+    "buttonShadowPressed": "0 2px 6px rgba(139,7,20,0.25)",
+    "note": "Les ombres sont teintées navy/crimson, jamais neutres — évite l'effet 'template gris générique'."
+  },
+
+  "iconography": {
+    "style": "outline fin (1.5–2px stroke), coins légèrement arrondis, pas de remplissage plat sauf dans les containers d'icône",
+    "primaryIconColor": "white sur fond navy, ou navy sur fond cream",
+    "sourceMotifs": [
+      "livre ouvert (repris du logo)",
+      "ancre (repris du logo, symbole de stabilité/fondation académique)",
+      "bulle de message",
+      "groupe de personnes / communauté"
+    ],
+    "note": "Les icônes génériques 'message privé' et 'groupe' de la capture sont conservées fonctionnellement, mais leur style doit faire écho au trait du logo (contours nets, pas de gradient interne)."
+  },
+
+  "components": {
+    "statusBar": {
+      "structure": "heure à gauche, icônes réseau/wifi/batterie à droite",
+      "colorOnDark": "white",
+      "keepFromReference": true
+    },
+
+    "appIconBadge": {
+      "shape": "carré à coins arrondis (radius md)",
+      "background": "navy700",
+      "iconColor": "white",
+      "iconMotif": "livre ouvert stylisé (écho direct au logo)",
+      "size": "56px",
+      "position": "centré en haut de l'écran héro, comme dans la capture"
+    },
+
+    "heroHeadline": {
+      "layout": "titre 3 lignes centré, mot-clé central cerclé en crimson500",
+      "background": "gradient heroBackground",
+      "textColor": "white",
+      "topSpacing": "2xl après l'appIconBadge"
+    },
+
+    "heroSubtitle": {
+      "textColor": "fog300",
+      "maxWidth": "260px",
+      "textAlign": "center",
+      "spacingTop": "sm"
+    },
+
+    "actionPillButton": {
+      "description": "Les deux boutons rectangulaires arrondis en bas de la capture ('Messages privés' / 'Groupe communautaire'), recolorés.",
+      "variants": {
+        "primary": {
+          "background": "crimson500",
+          "textColor": "white",
+          "iconColor": "white"
+        },
+        "secondary": {
+          "background": "cream",
+          "textColor": "navy900",
+          "iconColor": "navy700"
+        }
+      },
+      "layout": "icône + label empilés verticalement, padding généreux (md/lg), radius lg",
+      "size": "environ 45% largeur écran chacun, disposés côte à côte avec gap md"
+    },
+
+    "floatingArrowButton": {
+      "shape": "cercle",
+      "background": "cream ou white",
+      "iconColor": "navy900",
+      "position": "coin inférieur droit du bloc héro, légèrement débordant, comme dans la capture",
+      "size": "48px",
+      "shadow": "cardShadow"
+    },
+
+    "card": {
+      "background": "white",
+      "radius": "lg",
+      "padding": "lg",
+      "shadow": "cardShadow",
+      "borderOptional": "1px solid fog100"
+    },
+
+    "sectionDivider": {
+      "style": "ligne fine fog100, ou espace blanc pur — jamais de dégradé décoratif entre sections"
+    }
+  },
+
+  "designPrinciples": [
+    "La couleur raconte l'institution: navy = autorité académique, crimson = action/énergie, jamais l'inverse.",
+    "Un seul accent chaud (crimson) par écran maximum en usage CTA — sinon effet criard et perte de hiérarchie.",
+    "Structure mobile-first héritée de la capture: hero sombre en haut, actions claires en bas, forte lisibilité au pouce.",
+    "Typographie bold géométrique, titres en majuscules courtes, jamais de paragraphes longs en hero.",
+    "Les motifs du logo (livre, ancre) doivent apparaître de façon récurrente dans l'iconographie pour ancrer l'identité U-AUBEN — sinon le système de design est interchangeable avec n'importe quelle appli.",
+    "Aucune couleur en dehors de la palette fermée définie ci-dessus ne doit être introduite sans mise à jour explicite de ce fichier."
+  ],
+
+  "critique": {
+    "risquesIdentifies": [
+      "Navy + crimson est un combo académique classique mais qui frôle le cliché 'université américaine' — à assumer consciemment, pas par défaut.",
+      "Le rouge grenat sur fond navy peut poser un problème de contraste WCAG selon la nuance exacte utilisée pour le texte — tester crimson500 sur navy900 avant production, prévoir crimson400 plus clair si échec du contraste.",
+      "Si l'application a plusieurs CTA par écran, la règle 'un seul accent chaud' va être violée en pratique — il faut décider maintenant d'une hiérarchie secondaire (ex: navy500 outline) plutôt que de découvrir le problème en développement."
+    ]
+  }
+}
