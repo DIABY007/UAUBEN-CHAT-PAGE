@@ -48,18 +48,18 @@ export default function HomePage() {
               COMMUNAUTÉ
               {/* Ellipse SVG dessinée à la main — Or U-AUBEN */}
               <svg
-                className="absolute -inset-x-3 -inset-y-2 pointer-events-none w-auto h-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                viewBox="0 0 220 56"
+                className="absolute inset-x-[-8px] inset-y-[-6px] pointer-events-none w-full h-full overflow-visible"
+                viewBox="0 0 280 60"
                 fill="none"
                 aria-hidden="true"
               >
                 <ellipse
-                  cx="110"
-                  cy="28"
-                  rx="106"
-                  ry="24"
+                  cx="140"
+                  cy="30"
+                  rx="135"
+                  ry="26"
                   stroke="#D4A017"
-                  strokeWidth="3.5"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   className="opacity-85"
                 />
@@ -75,7 +75,7 @@ export default function HomePage() {
         </div>
 
         {/* ===== ZONE PHOTO : Étudiant ===== */}
-        <div className="flex justify-center items-center py-2 shrink-0">
+        <div className="flex justify-center items-center pt-1 pb-0 shrink-0">
           <div className="relative w-[200px] h-[220px]">
             <Image
               src="/student.png"
