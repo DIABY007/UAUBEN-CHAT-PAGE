@@ -63,22 +63,32 @@ export default function HomePage() {
         {/* Boutons */}
         <div className="shrink-0 w-full px-5 pb-5 pt-2">
           <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
-            <button className="flex flex-col items-center justify-center gap-2 w-full h-[80px] bg-[#CC1B1B] rounded-2xl shadow-lg active:scale-[0.97] transition-all duration-150">
+            <a
+              href="https://wa.me/55197164"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 w-full h-[80px] bg-[#CC1B1B] rounded-2xl shadow-lg active:scale-[0.97] transition-all duration-150 hover:opacity-90"
+            >
               <div className="size-8 rounded-xl bg-white/20 flex items-center justify-center">
                 <MessageCircle className="size-4 text-white" />
               </div>
               <span className="text-[10px] font-bold text-white uppercase tracking-wide text-center leading-tight">
                 Messages<br />Privés
               </span>
-            </button>
-            <button className="flex flex-col items-center justify-center gap-2 w-full h-[80px] bg-[#D4A017] rounded-2xl shadow-lg active:scale-[0.97] transition-all duration-150">
+            </a>
+            <a
+              href="https://chat.whatsapp.com/HBPOV2pqzDV35tpRWA0rg3?s=cl&p=a&ilr=1&amv=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col items-center justify-center gap-2 w-full h-[80px] bg-[#D4A017] rounded-2xl shadow-lg active:scale-[0.97] transition-all duration-150 hover:opacity-90"
+            >
               <div className="size-8 rounded-xl bg-white/20 flex items-center justify-center">
                 <Users className="size-4 text-white" />
               </div>
               <span className="text-[10px] font-bold text-white uppercase tracking-wide text-center leading-tight">
                 Groupe<br />Communautaire
               </span>
-            </button>
+            </a>
           </div>
         </div>
 
